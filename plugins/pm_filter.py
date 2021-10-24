@@ -18,7 +18,7 @@ async def filter(client, message):
             if user.status == "kicked":
                 await client.send_message(
                     chat_id=message.from_user.id,
-                    text="Sorry Sir, You are Banned to use me.",
+                    text="Estas baneado, no puedes usarme.",
                     parse_mode="markdown",
                     disable_web_page_preview=True
                 )
@@ -26,11 +26,11 @@ async def filter(client, message):
         except UserNotParticipant:
             await client.send_message(
                 chat_id=message.from_user.id,
-                text="**Please Join My Updates Channel to use this Bot!**",
+                text="**Debes entrar al canal de animes para usarme**",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
+                            InlineKeyboardButton("🤖 Canal de animes", url=invite_link.invite_link)
                         ]
                     ]
                 ),
@@ -40,7 +40,7 @@ async def filter(client, message):
         except Exception:
             await client.send_message(
                 chat_id=message.from_user.id,
-                text="Something went Wrong.",
+                text="Algo salio mal.",
                 parse_mode="markdown",
                 disable_web_page_preview=True
             )
@@ -272,11 +272,11 @@ async def cb_handler(client: Client, query: CallbackQuery):
         elif query.data == "about":
             buttons = [
                 [
-                    InlineKeyboardButton('Update Channel', url='https://t.me/subin_works'),
-                    InlineKeyboardButton('Source Code', url='https://github.com/subinps/Media-Search-bot')
+                    InlineKeyboardButton('Canal Anime', url='https://t.me/rranimesp'),
+ 
                 ]
                 ]
-            await query.message.edit(text="<b>Developer : <a href='https://t.me/subinps_bot'>SUBIN</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nSource Code : <a href='https://github.com/subinps/Media-Search-bot'>Click here</a>\nUpdate Channel : <a href='https://t.me/subin_works'>XTZ Bots</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
+            await query.message.edit(text="<b>Developer : <a href='https://t.me/rranimesp'>RRanimesp</a></b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
 
 
 
@@ -297,8 +297,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('More Bots', url='https://t.me/subin_works/122'),
-                        InlineKeyboardButton('Update Channel', url='https://t.me/subin_works')
+                        InlineKeyboardButton('Canal Anime', url='https://t.me/rranimesp'),
+
                     ]
                     ]
                 
@@ -329,8 +329,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     f_caption = f"{title}"
                 buttons = [
                     [
-                        InlineKeyboardButton('More Bots', url='https://t.me/subin_works/122'),
-                        InlineKeyboardButton('Update Channel', url='https://t.me/subin_works')
+                        InlineKeyboardButton('Canal Anime', url='https://t.me/rranimesp'),
+      
                     ]
                     ]
                 
